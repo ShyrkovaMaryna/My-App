@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Архив ZIP - WinRAR">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Архив ZIP - WinRAR.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
