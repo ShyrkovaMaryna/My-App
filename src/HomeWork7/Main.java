@@ -7,8 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] numbers = new int[]{11, 9, 99, 5, 44, 98, 25, 36, 27, -10, 2, 78,
-                -46, 37, 15, -7, -1, 18, -64, 3};
+        int[] numbers = new int[20];
+        Random rand = new Random();
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = rand.nextInt(200+1) -100;
         System.out.println("Елементи масиву: " + Arrays.toString(numbers));
         int NegSum = 0;
         int result = 0;
