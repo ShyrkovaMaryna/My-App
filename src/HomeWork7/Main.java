@@ -8,9 +8,10 @@ public class Main {
     public static void main(String[] args) {
 
         int[] numbers = new int[20];
-        Random rand = new Random();
+        Random random = new Random();
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = rand.nextInt(200+1) -100;
+            numbers[i] = random.nextInt(-100, 101);
+        }
         System.out.println("Елементи масиву: " + Arrays.toString(numbers));
         int NegSum = 0;
         int result = 0;
