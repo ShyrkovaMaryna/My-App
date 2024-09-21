@@ -14,10 +14,13 @@ public class Main {
         int rowSumOne = 0;
         int columnSumOne = 0;
         int diagonalSum = 0;
+        int sumAllRow =0;
+        int sumAllColumn=0;
+        int diagonalSumSecond=0;
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
-                array[i][j] = random.nextInt(50);
+                array[i][j] = random.nextInt(1,51);
             }
         }
         System.out.println("Матриця 4*4:");
@@ -28,7 +31,10 @@ public class Main {
             System.out.println();
         }
         for (int i = 0; i < array.length; i++) {
+            diagonalSumSecond += array[i][array.length -1 - i];
             for (int j = 0; j < array.length; j++) {
+                sumAllRow += array[i][j];
+                sumAllColumn += array[j][i];
                 if (i % 2 == 0) {
                     positiveRow += array[i][j];
                 } else {
@@ -52,7 +58,8 @@ public class Main {
         for (int j = 0; j < array.length; j++) {
             rowSumOne += array[0][j];
         }
-        if (columnSumOne != diagonalSum || diagonalSum != rowSumOne) {
+        if (columnSumOne != diagonalSum || diagonalSum != rowSumOne||
+                sumAllRow!=sumAllColumn|| diagonalSum !=diagonalSumSecond) {
 
             System.out.println("Матриця не є магічним квадратом.");
         }else {
